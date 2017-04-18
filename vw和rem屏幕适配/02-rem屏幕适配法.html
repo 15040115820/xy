@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=width-device,initial-scale=1,user-scalable=no">
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-size: 14px;
+			}
+			
+			.banner {
+				width: 5.6rem;
+				height: 3rem;
+				background: #0cc;
+				margin: 0.4rem auto;
+			}
+			
+			.item {
+				width: 1.6rem;
+				height: 1.6rem;
+				background: #00CCCC;
+				margin-left: 0.4rem;
+				float: left;
+			}
+			
+			.section {
+				width: 2.6rem;
+				height: 2.6rem;
+				background: #00CCCC;
+				margin-top: 0.4rem;
+				margin-left: 0.4rem;
+				float: left;
+			}
+		</style>
+		<script>
+			//动态计算html的基准字号
+			var designWidth = 640;//设计稿的尺寸
+			var remToPx = 100;//rem和像素的转换比
+			document.documentElement.style.fonSize = (window.innerWidth / designWidth) * remToPx + 'px';
+			
+			window.onresize = function() {
+				document.documentElement.style.fontSize = (window.innerWidth / designWidth) * remToPx + 'px';
+			}
+		</script>
+	</head>
+	<body>
+		<div class="banner">
+			banner
+		</div>
+		
+		<div class="item">item1</div>
+		<div class="item">item2</div>
+		<div class="item">item3</div>
+		
+		<div class="section">section1</div>
+		<div class="section">section2</div>
+	</body>
+</html>
